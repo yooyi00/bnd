@@ -1,0 +1,450 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*font*/
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+.en01 {
+  font-family: "Paperlogy-8ExtraBold";
+}
+
+.en02 {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+}
+
+/*header*/
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+header h1 {
+  width: 20%;
+  padding: 0 30px;
+}
+
+header > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header h1 a img {
+  width: 100%;
+  height: 100%;
+}
+
+/*navi*/
+.navi {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.navi li a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*container*/
+#container {
+  width: 100%;
+}
+
+/*section*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+/*con01*/
+.con01 {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  padding-top: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/*textBox*/
+.con01 .textBox {
+  width: 80%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.con01 .textBox h2 {
+  font-size: 70px;
+  background-image: linear-gradient(90deg, #2da3c9, #f47e3b, #d62e52);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.con01 .textBox p {
+  font-size: 35px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/*list*/
+.con01 .list {
+  display: flex;
+  margin: 200px 0px;
+}
+
+.con01 .list li {
+  width: 500px;
+  /* height: 500px; */
+  padding: 0px 50px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.con01 .list li img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+/* .con01 .list li::after {
+    content: "";
+    background-image: url(img/icon.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+} */
+
+.con01 .list li::after {
+  content: "";
+  background: url(../img/koz.png) no-repeat center / 100px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+/*hover*/
+.con01 .list li:hover::after {
+  opacity: 0.8;
+}
+
+.con01 .list li:hover img {
+  filter: brightness(60%);
+}
+
+.con01 .list li.a {
+  transform: rotate(5deg);
+}
+
+.con01 .list li.b {
+  transform: rotate(-5deg);
+}
+
+.con01 .list li.c {
+  transform: rotate(10deg);
+}
+
+/*con02*/
+.con02 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.con02 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.con02 .title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.con02 .title h2 {
+  font-size: 120px;
+  -webkit-text-stroke: 5px #fff;
+  color: transparent;
+}
+
+/*con03*/
+.con03 {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #2da3c9, #f47e3b, #d62e52);
+  padding: 50px 0;
+}
+
+.con03 .title3 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 170px;
+  line-height: 0.8;
+  padding-top: 30vh;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.con03 .title3 .type {
+  font-size: 230px;
+  font-style: italic;
+}
+
+/*workList*/
+.con03 .workList {
+  width: 70%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.con03 .workList li {
+  width: 45%;
+  margin-top: 200px;
+  z-index: 1;
+}
+
+.con03 .workList li:nth-child(2n) {
+  margin-top: 0px;
+}
+
+.con03 .workList img {
+  width: 100%;
+}
+
+/*textBox*/
+.con03 .textBox h3 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 20px 0px 5px;
+}
+
+.con03 .textBox .info {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+
+/*imgBox*/
+.con03 .imgBox {
+  position: relative;
+}
+
+/*before / after*/
+
+.con03 .imgBox::before {
+  width: 160px;
+  height: 160px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: url(../img/arrow.png) no-repeat center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.con03 .imgBox::after {
+  content: "";
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.4) url(../img/koz.png) no-repeat center;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*hover*/
+.con03 a:hover .imgBox::before {
+  opacity: 1;
+}
+
+.con03 a:hover .imgBox::after {
+  width: 160px;
+  height: 160px;
+}
+
+.con03 a:hover .imgBox img {
+  filter: brightness(50%);
+}
+
+/*con04*/
+.con04 {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding-top: 250px;
+}
+
+.con04 .inner {
+  width: 70%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 200px;
+}
+
+/*con04 textBox*/
+.con04 .inner .textBox {
+  width: 45%;
+  padding-top: 70px;
+}
+
+.con04 .inner .textBox h2 {
+  font-size: 2vw;
+}
+
+.con04 .inner .textBox h2 span {
+  font-style: italic;
+  display: block;
+  font-size: 4vw;
+  margin-bottom: 10px;
+}
+
+.con04 .inner .textBox .txt {
+  font-size: 1.5vw;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.con04 .inner .textBox ul {
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+.con04 .inner .textBox ul li {
+  font-size: 1.5vw;
+  line-height: 2;
+  position: relative;
+}
+
+.con04 .inner .textBox ul li ::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 10px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.con04 .inner .textBox .btn {
+  display: block;
+  width: 150px;
+  height: 50px;
+  background-color: #222;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 25px;
+}
+
+/*con04 imgBox*/
+.con04 .inner .imgBox {
+  width: 50%;
+  position: relative;
+}
+
+.con04 .inner .imgBox li {
+  width: 550px;
+  height: 450px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.con04 .inner .imgBox li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.con04 .inner .imgBox li.img1 {
+  transform: translateY(-50%) rotate(5deg);
+  z-index: 1;
+}
+.con04 .inner .imgBox li.img2 {
+  transform: translateY(-50%) rotate(-5deg);
+  z-index: 2;
+}
+.con04 .inner .imgBox li.img3 {
+  transform: translateY(-50%) rotate(7deg);
+  z-index: 3;
+}
+.con04 .inner .imgBox li.img4 {
+  transform: translateY(-50%) rotate(-7deg);
+  z-index: 4;
+}
